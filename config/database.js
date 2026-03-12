@@ -4,14 +4,14 @@ const path = require('path');
 require('dotenv').config();
 
 // ตรวจสอบว่ามี environment variables ครบหรือไม่
-const requiredEnvVars = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME'];
-const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
+//const requiredEnvVars = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME'];
+//const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
 
-if (missingEnvVars.length > 0) {
-  console.error('❌ Missing required environment variables:', missingEnvVars.join(', '));
-  console.error('Please check your .env file');
-  process.exit(1);
-}
+//if (missingEnvVars.length > 0) {
+  //console.error('❌ Missing required environment variables:', missingEnvVars.join(', '));
+  //console.error('Please check your .env file');
+  //process.exit(1);
+//}
 
 // อ่าน CA certificate (ถ้ามี)
 let sslConfig = {
