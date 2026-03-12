@@ -23,8 +23,10 @@ const app = express();
 // ========== Middleware ==========
 // Enable CORS
 app.use(cors({
-  origin: 'http://localhost:3000', // ✅ Frontend URL
-  credentials: true,
+  origin: [
+    'http://localhost:3000',
+    'https://your-vercel-url.vercel.app', // ← เพิ่ม Vercel URL ทีหลังได้ครับ
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
